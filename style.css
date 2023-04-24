@@ -86,6 +86,10 @@ li {
     text-align: center;
 }
 
+#winners-list li {
+    padding: 10px 0;
+}
+
 
 * {
     scrollbar-width: auto;

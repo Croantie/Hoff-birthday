@@ -28,8 +28,8 @@ const fillWinnersList = () => {
     winnerBlock.innerHTML = currentPlayer.name
     winnersResult.push(currentPlayer)
     const someWinner = document.createElement('li')
-    someWinner.innerHTML = currentPlayer.id + ' ' + currentPlayer.name
-    winnersList.appendChild(someWinner)
+    someWinner.innerHTML = `${currentPlayer.id} <b>${currentPlayer.name}</b>, ${currentPlayer.experience}, ${currentPlayer.department}`
+    winnersList.prepend(someWinner)
     setTimeout(() => {
         box.classList.remove('animation')
     }, 3000)
