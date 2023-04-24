@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>Hoff - 14 лет!</title>
+</head>
+<body>
+    <div id="container" class="container">
+        <div class="header">
+            <h1>С днём рождения, Hoff !</h1>
+            <h2>Нам <span class="number">14</span> лет</h2>
+        </div>
+        <div class="main-block">
+            <div class="participants">
+                <ul id="participants-list"></ul>
+            </div>
+            <div id="box" class="box">
+                <div class="box-body">
+                    <div class="paper">
+                        <div id="winner" class="name"></div>
+                    </div>
+                    <div class="box-lid">
+                        <div class="box-bowtie"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="winners">
+                <ul id="winners-list"></ul>
+            </div>
+        </div>
+        <div class="hoff-dog">
+            <img src="/assets/images/hoff-dog.png" alt="">
+        </div>
+    </div>
+    <script src="baloon-animation.js"></script>
+    <script src="box-animation.js"></script>
+    <script type="module" src="participants-list.js"></script>
+    <script type="module" src="winners-generator.js" defer></script>
+</body>
+</html>
