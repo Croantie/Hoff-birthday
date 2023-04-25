@@ -3,6 +3,7 @@ import {participantsList} from './participants-list.js'
 const box = document.getElementById('box');
 const winnerBlock = document.getElementById('winner')
 const winnersList = document.getElementById('winners-list')
+const paper = document.getElementById('paper')
 let winners = []
 const winnersResult = []
 
@@ -22,25 +23,27 @@ const shuffle = (arr) => {
 }
 
 const fillWinnersList = () => {
-    box.classList.add('animation');
-    box.classList.add('disabled');
+    box.classList.add('animation', 'disabled');
+    // box.classList.add('disabled');
     let currentPlayer = winners.shift();
     winnerBlock.innerHTML = currentPlayer.name
     winnersResult.push(currentPlayer)
     const someWinner = document.createElement('li')
-    someWinner.innerHTML = `${currentPlayer.id} <b>${currentPlayer.name}</b>, ${currentPlayer.experience}, ${currentPlayer.department}`
+    someWinner.innerHTML = `<b>${currentPlayer.name}</b><br> ${currentPlayer.experience}, ${currentPlayer.department}`
     winnersList.prepend(someWinner)
     setTimeout(() => {
         box.classList.remove('animation')
-    }, 3000)
+    }, 2600)
 }
 
 const startRandomizer = (func, num) => {
     if (!num) {
+        box.classList.add('animation', 'dog-animation')
+        paper.style.display = 'none'
         return
     }
     func()
-    setTimeout(() => startRandomizer(func, num - 1), 4000)
+    setTimeout(() => startRandomizer(func, num - 1), 3500)
 }
 
 box.addEventListener('click', () => {

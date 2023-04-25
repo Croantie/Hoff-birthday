@@ -3,6 +3,11 @@
     src: url("/assets/fonts/boorsok.otf") format("opentype"), url("/assets/fonts/boorsok.ttf") format("ttf");
 }
 
+@font-face {
+    font-family: "Inter";
+    src: url("/assets/fonts/Inter-Medium.otf") format("opentype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -40,7 +45,7 @@ h1 {
     letter-spacing: 4px;
 }
 
-h2 {
+h2, .list-header {
     text-align: center;
     font-size: 50px;
     margin: 20px 0;
@@ -53,6 +58,12 @@ h2 {
 h2 .number {
     font-size: 68px;
     font-family: "boorsok", sans-serif;
+}
+
+.list-header {
+    font-size: 40px;
+    line-height: 40px;
+    margin: 0;
 }
 
 .main-block {
@@ -84,12 +95,8 @@ ul {
 li {
     padding: 15px 0;
     text-align: center;
+    font-family: 'Inter', sans-serif;
 }
-
-#winners-list li {
-    padding: 10px 0;
-}
-
 
 * {
     scrollbar-width: auto;
@@ -147,6 +154,27 @@ li {
     align-items: center;
     font-size: 30px;
     text-align: center;
+    font-family: 'Inter', sans-serif;
+}
+
+.final-dog {
+    opacity: 0;
+    transform: translateY(0%);
+    transition: all 0.5s;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    width: 180px;
+}
+
+.final-dog img {
+    width: 100%;
+}
+
+.dog-animation .box-body .final-dog {
+    opacity: 1;
+    z-index: 0;
+    transform: translateY(-135px);
 }
 
 .disabled {
@@ -195,7 +223,6 @@ li {
     bottom: 90%;
     height: 40px;
     background-color: #FC1A40;
-    height: 40px;
     width: 220px;
     border-radius: 17px 17px 5px 5px;
     box-shadow: 0 8px 4px -4px rgba(0, 0, 0, 0.3);
