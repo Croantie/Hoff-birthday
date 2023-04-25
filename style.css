@@ -134,8 +134,9 @@ li {
     width: 180px;
     height: 150px;
     background: #fff;
-    border-radius: 2px;
+    border-radius: 50px;
     user-select: none;
+    border: 10px outset red;
 }
 
 .box-body .paper .name {
