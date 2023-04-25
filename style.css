@@ -75,8 +75,8 @@ h2 .number {
 }
 
 .participants, .winners {
-    height: 650px;
-    width: 400px;
+    height: 700px;
+    width: 450px;
     background: rgba(255, 255, 255, 0.23);
     border-radius: 10px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -84,7 +84,7 @@ h2 .number {
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.08);
     padding: 24px 12px;
-    font-size: 20px;
+    font-size: 18px;
     overflow-y: scroll;
 }
 
@@ -97,6 +97,16 @@ li {
     text-align: center;
     font-family: 'Inter', sans-serif;
 }
+
+#winners-list li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ff000063;
+}
+
+ul#participants-list {
+    font-size: 14px;
+}
+
 
 * {
     scrollbar-width: auto;
@@ -131,6 +141,7 @@ li {
     background: linear-gradient(#FC1A40, #ff0303);
     cursor: pointer;
 }
+
 .box-body .paper {
     opacity: 0;
     transform: translateY(0%);
@@ -138,11 +149,12 @@ li {
     margin: 0 auto;
     display: block;
     position: relative;
-    width: 180px;
+    width: 200px;
     height: 150px;
     background: #fff;
-    border-radius: 2px;
+    border-radius: 50px;
     user-select: none;
+    border: 10px outset red;
 }
 
 .box-body .paper .name {
