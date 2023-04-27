@@ -24,12 +24,11 @@ const shuffle = (arr) => {
 
 const fillWinnersList = () => {
     box.classList.add('animation', 'disabled');
-    // box.classList.add('disabled');
     let currentPlayer = winners.shift();
     winnerBlock.innerHTML = currentPlayer.name
     winnersResult.push(currentPlayer)
     const someWinner = document.createElement('li')
-    someWinner.innerHTML = `<b>${currentPlayer.name}</b><br> ${currentPlayer.experience}, ${currentPlayer.department}`
+    someWinner.innerHTML = `<b>${currentPlayer.name}</b><br> <span style="font-size: 11px">${currentPlayer.experience}, ${currentPlayer.department}</span>`
     winnersList.prepend(someWinner)
     setTimeout(() => {
         box.classList.remove('animation')
@@ -48,6 +47,5 @@ const startRandomizer = (func, num) => {
 
 box.addEventListener('click', () => {
     shuffle(participantsList)
-    console.log(winners)
     startRandomizer(fillWinnersList, 14)
 })
