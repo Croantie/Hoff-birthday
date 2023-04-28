@@ -730,11 +730,6 @@ const participantsList = [
         department: '814 Новосибирск'
     },
     {
-        name: 'Юлия Чичкина',
-        experience: '7 лет в Hoff',
-        department: 'ЕЦО'
-    },
-    {
         name: 'Юлия Гаранина',
         experience: '5 лет в Hoff',
         department: 'ЕЦО'
@@ -773,11 +768,6 @@ const participantsList = [
         name: 'Наталья Титова',
         experience: '1 год в Hoff',
         department: 'Дирекция по сервису'
-    },
-    {
-        name: 'Виталий Егоров',
-        experience: '4 года в Hoff',
-        department: '810 Европолис'
     },
     {
         name: 'Софья Волощенко',
